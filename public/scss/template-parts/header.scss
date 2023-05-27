@@ -107,12 +107,6 @@ header {
             @include media('>tablet') {
                 display: none;
             }
-
-            .hamburger-box {
-                .hamburger-inner {
-                    
-                }
-            }
         }
     }
 }
