@@ -1,7 +1,6 @@
 header {
     .top-bar {
         padding: fluid(10, 15) 0;
-        // border-bottom: 1px solid fade-out($color-1, 0.8);
         border-bottom: 1px solid rgba(0, 0, 0, 0.05);
         
         .wrapper {
@@ -44,8 +43,11 @@ header {
     }
 
     .header-wrap {
-        padding: fluid(10, 20) 0;
         border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+
+        @include media('>tablet') {
+            padding: fluid(10, 20) 0;
+        }
 
         .wrapper {
             @include flex(space-between, center, wrap);
@@ -72,13 +74,44 @@ header {
                     }
                 }
             }
+
+            &.desktop {
+                display: none;
+
+                @include media('>tablet') {
+                    display: block;
+                }
+            }
         }
 
-        .search-icon {
+        .search {
             svg {
-                width: rem(26);
-                height: rem(26);
+                width: rem(20);
+                height: rem(20);
                 stroke-width: rem(3);
+            }
+
+            &.desktop {
+                display: none;
+
+                @include media('>tablet') {
+                    @include flex(center, center, wrap);
+                }
+            }
+        }
+
+        .hamburger {
+            display: flex;
+            background-color: $color-1;
+
+            @include media('>tablet') {
+                display: none;
+            }
+
+            .hamburger-box {
+                .hamburger-inner {
+                    
+                }
             }
         }
     }
