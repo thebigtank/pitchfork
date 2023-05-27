@@ -1,0 +1,82 @@
+header {
+    .top-bar {
+        padding: fluid(10, 15) 0;
+        border-bottom: 1px solid fade-out($color-1, 0.8);
+        
+        .wrapper {
+            @include flex(space-between, center, wrap);
+        }
+
+        .location {
+            @include flex(flex-start, center, wrap);
+            gap: fluid(4, 8);
+
+            svg {
+                width: rem(26);
+                height: rem(26);
+            }
+
+            .city {
+                text-transform: capitalize;
+                font-size: fluid(10, 12);
+                font-weight: 500;
+                color: fade-out($color-1, 0.5);
+            }
+        }
+
+        .logged-in-user {
+            @include flex(flex-start, center, wrap);
+            gap: fluid(6, 12);
+
+            .user {
+                text-transform: capitalize;
+                font-size: fluid(10, 12);
+                font-weight: 600;
+            }
+
+            svg {
+                width: rem(16);
+                height: rem(16);
+                fill: $color-2;
+            }
+        }
+    }
+
+    .header-wrap {
+        padding: fluid(20, 40) 0;
+
+        .wrapper {
+            @include flex(space-between, center, wrap);
+        }
+
+        .logo {
+            font-family: $merriweather;
+            font-size: fluid(18, 26);
+            text-transform: capitalize;
+        }
+
+        .menu {
+            ul {
+                display: flex;
+                gap: fluid(16, 36);
+
+                li {
+                    a {
+                        display: block;
+                        text-transform: uppercase;
+                        font-size: fluid(10, 12);
+                        font-weight: 700;
+                    }
+                }
+            }
+        }
+
+        .search-icon {
+            svg {
+                width: rem(26);
+                height: rem(26);
+                stroke-width: rem(3);
+            }
+        }
+    }
+}
