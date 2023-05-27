@@ -1,6 +1,6 @@
 import './scss/main.scss';
-import { setupCounter } from './js/counter.js'
+import { mobileMenu } from './js/mobile-menu.js'
 
 document.addEventListener("DOMContentLoaded", function () {
-	setupCounter();
+	mobileMenu();
 });
